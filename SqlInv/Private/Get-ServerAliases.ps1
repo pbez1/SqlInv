@@ -4,14 +4,13 @@ Function Get-ServerAliases {
     [cmdletbinding()]
     Param(
         [Parameter (Mandatory=$false)]
-        [string] $SqlInvServer = $global:DSI_Server
+        [string] $SqlInvServer = $SqlInv_Server
         )
     
 Write-Verbose 'Running the "up_identify_instance_aliases" procedure located in the DSI database.'
 
-$sql = 'exec up_identify_instance_aliases'
-
 try {
+    $sql = 'exec up_identify_instance_aliases'
     Invoke-Sqlcmd @sql_parms -ServerInstance $SqlInvServer -Database 'dsi' -Query $sql
     }
 catch{
