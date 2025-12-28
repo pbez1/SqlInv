@@ -1,9 +1,11 @@
 {
-    "MinVerSqlInvUtil"  : "1.0.5",
-    "Mail_To"           : "paul.bezanson@pacificsource.com",
-    "Batch_Desc"        : "Base Inventory Update (PS)",
-    ".SqlCmdParms"      : [
-                           "AbortOnError=True",
-                            "TrustServerCertificate=True"
-                            ]
+    "MinVerSqlInvUtil"      : "1.0.5",
+    "MaxVerSqlInvUtil"    : "99.99.9999",
+
+    "Mail_To"               : "paul.bezanson@pacificsource.com",
+    "Batch_Desc"            : "Base Inventory Update (PS)",
+    ".SqlCmdParms"          : [
+                               "AbortOnError=True",
+                                "TrustServerCertificate=True"
+                                ]
 }

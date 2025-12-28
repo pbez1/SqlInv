@@ -1,7 +1,7 @@
 #Requires -Version 5.1
 
 #----------------------------------------------------------------------------------------
-#                                 Module: DsiInv
+#                                 Module: SqlInv
 #----------------------------------------------------------------------------------------
 
 #region Initialize_Module
@@ -34,7 +34,7 @@ if ($ImportFromDev) {
     Write-Verbose "Importing modules from locally installed modules."
 
     # Production: Import the modules from the system's installed modules.
-    Import-Module SqlInvUtil -MinimumVersion $conf_parms.MinVerSqlInvUtil -Global -ErrorAction Stop
+    Import-Module SqlInvUtil -MinimumVersion $conf_parms.MinVerSqlInvUtil -MaximumVersion $conf_parms.MaxVerSqlInvUtil -Global -ErrorAction Stop
     }
 
 # Create the variables from the contents of the JSON file.  JSON elements preceeded by a period "." will
